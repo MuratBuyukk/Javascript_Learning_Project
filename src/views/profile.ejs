@@ -1,0 +1,47 @@
+<h1>Profile Panel</h1>
+<div class="wrapper bg-white mt-sm-5">
+    <form action="/management/profile_update" method="post" enctype="multipart/form-data">
+        <div class="d-flex align-items-start py-3 border-bottom">
+            <img src="/uploads/profile_pictures/<%- user.profilePicture %>" width="300" height="300"
+                class="img" alt="">
+            <div class="pl-sm-4 pl-2" id="img-section">
+                <b>Profile Photo</b>
+                <p>Accepted file type .png. Less than 1MB</p>
+                <input name="profilePicture" type="file" class="btn button border"></button>
+            </div>
+        </div>
+        <div class="py-2">
+            <div class="row py-2">
+                <div class="col-md-6">
+                    <label for="firstname">First Name</label>
+                    <input type="text" name="firstName" class="bg-light form-control" value="<%- user.firstName %>" placeholder="Steve">
+                </div>
+                <div class="col-md-6 pt-md-0 pt-3">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" name="lastName" class="bg-light form-control" value="<%- user.lastName %>" placeholder="Smith">
+                </div>
+            </div>
+            <div class="row py-2">
+                <div class="col-md-6">
+                    <label for="email">Email Address</label>
+                    <input type="text" name="email" readonly class="bg-light form-control" value="<%- user.email %>"
+                        placeholder="steve_@email.com">
+                </div>
+            </div>
+            <div class="py-3 pb-4 border-bottom">
+                <button type="submit" class="btn btn-primary mr-3">Save Changes</button>
+                <button class="btn border button">Cancel</button>
+            </div>
+    </form>
+
+    <div class="d-sm-flex align-items-center pt-3" id="deactivate">
+        <div>
+            <b>Deactivate your account</b>
+            <p>Details about your company account and password</p>
+        </div>
+        <div class="ml-auto">
+            <button class="btn danger">Deactivate</button>
+        </div>
+    </div>
+</div>
+</div>
